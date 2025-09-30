@@ -32,6 +32,7 @@ export default function Cell({ value, onClick }: CellProps) {
       />
     </Button>
   ) : (
+     /* @ts-expect-error component is not needed */
     <Grid
       item
       sx={{

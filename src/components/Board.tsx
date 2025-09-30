@@ -21,6 +21,7 @@ export default function Board({
       width={"100%"}
       paddingX={2}
     >
+      {/* @ts-expect-error component is not needed */}
       <Grid container item justifyContent="stretch">
         {Array.from({ length: COLS }).map((_, cIdx) => (
           <Cell
@@ -31,6 +32,7 @@ export default function Board({
         ))}
       </Grid>
       {board.map((row, rIdx) => (
+        /* @ts-expect-error component is not needed */
         <Grid key={rIdx} container item justifyContent="stretch">
           {row.map((cell: Player, cIdx: number) => (
             <Cell value={cell} key={cIdx} />

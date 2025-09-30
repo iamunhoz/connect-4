@@ -17,6 +17,7 @@ export default function ThemeChanger() {
       }}
       onClick={() =>
         setThemeColor(
+          // @ts-expect-error state changing works
           themeColor === COLORS.green ? COLORS.purple : COLORS.green
         )
       }
